@@ -78,9 +78,7 @@ export function International() {
       ref={sectionRef}
       className="py-16 md:py-24 lg:py-32"
       style={{
-        background: document.documentElement.classList.contains('dark')
-          ? 'linear-gradient(to bottom, #0B1120, #1A2332)'
-          : 'linear-gradient(to bottom, #E8EDF3, #D8DFE8)',
+        background: 'var(--intl-gradient)',
       }}
     >
       <Container>
