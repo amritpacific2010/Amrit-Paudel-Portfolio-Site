@@ -1,0 +1,92 @@
+{
+  "assets": [
+    {
+      "id": "hero-bg",
+      "type": "image",
+      "format": "jpg",
+      "description": "Abstract technology background with deep blue and dark navy tones. Circuit board traces, subtle grid patterns, and faint blue signal waveforms. Professional engineering aesthetic. Dark enough for white text overlay.",
+      "size": "1920x1080",
+      "ratio": "16:9",
+      "transparent": false,
+      "method": "generate",
+      "output": "public/assets/hero-bg.jpg"
+    },
+    {
+      "id": "about-photo",
+      "type": "image",
+      "format": "jpg",
+      "description": "Professional headshot of a South Asian male electronics engineer in his mid-30s, wearing business casual attire (navy blue shirt), friendly confident smile, neutral studio background, soft professional lighting, square crop portrait photography",
+      "size": "800x800",
+      "ratio": "1:1",
+      "transparent": false,
+      "method": "generate",
+      "output": "public/assets/about-photo.jpg"
+    },
+    {
+      "id": "project-cctv",
+      "type": "image",
+      "format": "jpg",
+      "description": "Large-scale CCTV surveillance installation with multiple dome cameras mounted on poles at a government facility, network equipment racks visible in background, professional security infrastructure, blue-toned lighting, wide angle shot",
+      "size": "1200x800",
+      "ratio": "3:2",
+      "transparent": false,
+      "method": "generate",
+      "output": "public/assets/project-cctv.jpg"
+    },
+    {
+      "id": "project-fiber",
+      "type": "image",
+      "format": "jpg",
+      "description": "Close-up photo of fiber optic cable splicing work with blue and green light emanating from fiber ends, technician hands performing precision work, technical precision aesthetic, dark background with vibrant fiber glow",
+      "size": "1200x800",
+      "ratio": "3:2",
+      "transparent": false,
+      "method": "generate",
+      "output": "public/assets/project-fiber.jpg"
+    },
+    {
+      "id": "project-radio",
+      "type": "image",
+      "format": "jpg",
+      "description": "VHF/UHF radio base station with tall antenna tower, communication equipment in rack cabinets, professional telecommunications setup, outdoor installation with clear sky, engineering infrastructure",
+      "size": "1200x800",
+      "ratio": "3:2",
+      "transparent": false,
+      "method": "generate",
+      "output": "public/assets/project-radio.jpg"
+    },
+    {
+      "id": "project-embedded",
+      "type": "image",
+      "format": "jpg",
+      "description": "Raspberry Pi development board with connected sensors and electronic components on a breadboard, LED indicators glowing, code visible on a monitor in soft background focus, maker workspace, blue accent lighting",
+      "size": "1200x800",
+      "ratio": "3:2",
+      "transparent": false,
+      "method": "generate",
+      "output": "public/assets/project-embedded.jpg"
+    },
+    {
+      "id": "project-pcb",
+      "type": "image",
+      "format": "jpg",
+      "description": "Close-up macro photo of a blue printed circuit board with copper traces, electronic components, and solder joints visible, technical detail and precision, shallow depth of field, professional product photography",
+      "size": "1200x800",
+      "ratio": "3:2",
+      "transparent": false,
+      "method": "generate",
+      "output": "public/assets/project-pcb.jpg"
+    },
+    {
+      "id": "project-sudan",
+      "type": "image",
+      "format": "jpg",
+      "description": "Telecommunications tower installation in a warm arid Sudan landscape, radio equipment being installed on a tall communication tower, UN peacekeeping context, warm golden light, desert backdrop, engineering work in progress",
+      "size": "1200x800",
+      "ratio": "3:2",
+      "transparent": false,
+      "method": "generate",
+      "output": "public/assets/project-sudan.jpg"
+    }
+  ]
+}

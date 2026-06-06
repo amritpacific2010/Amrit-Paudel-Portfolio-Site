@@ -1,0 +1,193 @@
+@import '@fontsource-variable/inter';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn compatibility - map to our custom props */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 15%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 215 28% 15%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 215 28% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 216 20% 90%;
+    --input: 216 20% 90%;
+    --ring: 217 91% 60%;
+    --radius: 0.75rem;
+
+    /* Portfolio custom properties - Light Mode */
+    --page-bg: #F5F7FA;
+    --surface: #FFFFFF;
+    --surface-elevated: #EDF0F5;
+    --text-primary: #1A2332;
+    --text-secondary: #4A5568;
+    --text-muted: #8896A8;
+    --border-color: #D8DFE8;
+    --border-focus: #3B82F6;
+    --accent-blue: #3B82F6;
+    --accent-blue-dark: #2563EB;
+    --accent-blue-light: #60A5FA;
+    --accent-blue-glow: rgba(59, 130, 246, 0.15);
+    --success: #10B981;
+    --error: #EF4444;
+    --hero-overlay: rgba(26, 35, 50, 0.6);
+    --gold-accent: #F59E0B;
+
+    /* Transition for theme switching */
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 210 40% 96%;
+    --card: 215 28% 14%;
+    --card-foreground: 210 40% 96%;
+    --popover: 215 28% 14%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 20%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 215 25% 20%;
+    --muted-foreground: 215 16% 60%;
+    --accent: 215 25% 20%;
+    --accent-foreground: 210 40% 96%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 217 91% 60%;
+
+    /* Portfolio custom properties - Dark Mode */
+    --page-bg: #0B1120;
+    --surface: #1A2332;
+    --surface-elevated: #243044;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border-color: #2D3A4E;
+    --border-focus: #60A5FA;
+    --accent-blue: #3B82F6;
+    --accent-blue-dark: #2563EB;
+    --accent-blue-light: #60A5FA;
+    --accent-blue-glow: rgba(59, 130, 246, 0.25);
+    --success: #34D399;
+    --error: #F87171;
+    --hero-overlay: rgba(0, 0, 0, 0.7);
+    --gold-accent: #F59E0B;
+  }
+
+  * {
+    @apply border-[var(--border-color)];
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter Variable', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scroll indicator bounce animation */
+@keyframes bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce-arrow {
+  animation: bounce-arrow 1.5s ease-in-out infinite;
+}
+
+/* Shimmer animation for progress bars */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s ease-out;
+}
+
+/* Shake animation for form errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-slow {
+  animation: float 10s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+/* Pulse animation for timeline dots */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
