@@ -82,7 +82,7 @@ export function Hero() {
         ref={bgRef}
         className="absolute inset-0 -top-[10%] -bottom-[10%] scale-110"
         style={{
-          backgroundImage: 'url(/assets/hero-bg.jpg)',
+          backgroundImage: `url(${import.meta.env.BASE_URL}assets/hero-bg.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

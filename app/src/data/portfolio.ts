@@ -1,5 +1,10 @@
 import type { TimelineEntry, SkillCategory, Project, Education, Certification, Language, Highlight } from '@/types';
 
+const getAssetPath = (path: string) => {
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${cleanPath}`;
+};
+
 export const personalInfo = {
   name: 'Amrit Kumar Paudel',
   title: 'Electronics \u0026 Communication Engineer | Electronics Technician | Networking \u0026 CCTV Specialist',
@@ -147,7 +152,7 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
   {
     id: 'cctv',
-    image: '/assets/project-cctv.jpg',
+    image: getAssetPath('/assets/project-cctv.jpg'),
     title: 'Government CCTV Infrastructure',
     description:
       'Led and implemented more than 40 large-scale government CCTV surveillance deployments across Nepal. Designed network infrastructure, coordinated installation teams, and delivered comprehensive video management solutions.',
@@ -155,7 +160,7 @@ export const projects: Project[] = [
   },
   {
     id: 'fiber',
-    image: '/assets/project-fiber.jpg',
+    image: getAssetPath('/assets/project-fiber.jpg'),
     title: 'Fiber Optic Communication Networks',
     description:
       'Designed and deployed long-distance fiber optic communication systems using single-mode and multi-mode fiber. Implemented media converters, SFP modules, and network termination equipment.',
@@ -163,7 +168,7 @@ export const projects: Project[] = [
   },
   {
     id: 'radio',
-    image: '/assets/project-radio.jpg',
+    image: getAssetPath('/assets/project-radio.jpg'),
     title: 'Radio Communication Systems',
     description:
       'Installed and maintained VHF/UHF radio systems including Motorola digital trunking systems. Configured base stations, repeaters, and vehicle-mounted communication equipment.',
@@ -171,7 +176,7 @@ export const projects: Project[] = [
   },
   {
     id: 'embedded',
-    image: '/assets/project-embedded.jpg',
+    image: getAssetPath('/assets/project-embedded.jpg'),
     title: 'Embedded Systems Research',
     description:
       'Developed embedded systems using Raspberry Pi, STM32, and Arduino platforms for automation and IoT applications. Created sensor interfaces, control systems, and data acquisition solutions.',
@@ -179,7 +184,7 @@ export const projects: Project[] = [
   },
   {
     id: 'pcb',
-    image: '/assets/project-pcb.jpg',
+    image: getAssetPath('/assets/project-pcb.jpg'),
     title: 'PCB Design and Development',
     description:
       'Designed custom printed circuit boards for specialized electronic applications. Created schematics, performed layout routing, and developed prototypes for testing and validation.',
@@ -219,7 +224,7 @@ export const internationalExperience = {
     location: 'Sudan',
     badge: 'Mission-Critical Communications',
   },
-  image: '/assets/project-sudan.jpg',
+  image: getAssetPath('/assets/project-sudan.jpg'),
 };
 
 export const educationList: Education[] = [

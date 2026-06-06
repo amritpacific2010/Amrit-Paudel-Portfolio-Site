@@ -64,7 +64,7 @@ export function About() {
                 style={{ borderColor: 'var(--border-color)' }}
               >
                 <img
-                  src="/assets/about-photo.jpg"
+                  src={`${import.meta.env.BASE_URL}assets/about-photo.jpg`}
                   alt={personalInfo.name}
                   className="h-full w-full object-cover transition-transform duration-300 hover:scale-[1.03]"
                 />
