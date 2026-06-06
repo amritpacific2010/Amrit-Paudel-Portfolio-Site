@@ -6,73 +6,51 @@
 
 @layer base {
   :root {
-    /* User's Theme Variables */
-    --bg-primary: #FFFFFF;
-    --bg-secondary: #F8FAFC;
-    --accent: #2563EB;
-    --accent-light: #3B82F6;
-    --text-primary: #0F172A;
-    --text-secondary: #475569;
-    --border: #E2E8F0;
-
-    /* shadcn compatibility - map to user's variables */
+    /* shadcn compatibility - map to our custom props */
     --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%; /* HSL for #0F172A */
+    --foreground: 215 28% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --card-foreground: 215 28% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-    --primary: 221.2 83.2% 53.3%; /* HSL for #2563EB */
+    --popover-foreground: 215 28% 15%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 98%; /* HSL for #F8FAFC */
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 98%;
-    --muted-foreground: 215.3 19.3% 34.5%; /* HSL for #475569 */
-    --accent-hsl: 210 40% 96.1%; /* HSL for #F1F5F9 (subtle hover) */
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 215 28% 15%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 215 28% 15%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border-hsl: 214.3 31.8% 91.4%; /* HSL for #E2E8F0 */
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --border: 216 20% 90%;
+    --input: 216 20% 90%;
+    --ring: 217 91% 60%;
     --radius: 0.75rem;
 
     /* Portfolio custom properties - Light Mode */
-    --page-bg: var(--bg-secondary);
-    --surface: var(--bg-primary);
-    --surface-elevated: #F1F5F9;
-    --text-primary: var(--text-primary);
-    --text-secondary: var(--text-secondary);
-    --text-muted: #64748B;
-    --border-color: var(--border);
-    --border-focus: var(--accent-light);
-    --accent-blue: var(--accent-light);
-    --accent-blue-dark: var(--accent);
+    --page-bg: #F5F7FA;
+    --surface: #FFFFFF;
+    --surface-elevated: #EDF0F5;
+    --text-primary: #1A2332;
+    --text-secondary: #4A5568;
+    --text-muted: #8896A8;
+    --border-color: #D8DFE8;
+    --border-focus: #3B82F6;
+    --accent-blue: #3B82F6;
+    --accent-blue-dark: #2563EB;
     --accent-blue-light: #60A5FA;
-    --accent-blue-glow: rgba(37, 99, 235, 0.15);
+    --accent-blue-glow: rgba(59, 130, 246, 0.15);
     --success: #10B981;
     --error: #EF4444;
-    --hero-overlay: rgba(15, 23, 42, 0.6);
+    --hero-overlay: rgba(26, 35, 50, 0.6);
     --gold-accent: #F59E0B;
-
-    /* Global background gradient for International Section */
-    --intl-gradient: linear-gradient(to bottom, #F8FAFC, #E2E8F0);
 
     /* Transition for theme switching */
     transition: background-color 300ms ease, color 300ms ease;
   }
 
   .dark {
-    /* Theme Variables in Dark Mode */
-    --bg-primary: #1A2332;
-    --bg-secondary: #0B1120;
-    --accent: #2563EB;
-    --accent-light: #3B82F6;
-    --text-primary: #F1F5F9;
-    --text-secondary: #94A3B8;
-    --border: #2D3A4E;
-
-    /* shadcn compatibility in Dark Mode */
     --background: 220 40% 8%;
     --foreground: 210 40% 96%;
     --card: 215 28% 14%;
@@ -85,34 +63,31 @@
     --secondary-foreground: 210 40% 96%;
     --muted: 215 25% 20%;
     --muted-foreground: 215 16% 60%;
-    --accent-hsl: 215 25% 20%;
+    --accent: 215 25% 20%;
     --accent-foreground: 210 40% 96%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border-hsl: 215 25% 22%;
+    --border: 215 25% 22%;
     --input: 215 25% 22%;
     --ring: 217 91% 60%;
 
     /* Portfolio custom properties - Dark Mode */
-    --page-bg: var(--bg-secondary);
-    --surface: var(--bg-primary);
+    --page-bg: #0B1120;
+    --surface: #1A2332;
     --surface-elevated: #243044;
-    --text-primary: var(--text-primary);
-    --text-secondary: var(--text-secondary);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
     --text-muted: #64748B;
-    --border-color: var(--border);
+    --border-color: #2D3A4E;
     --border-focus: #60A5FA;
-    --accent-blue: var(--accent-light);
-    --accent-blue-dark: var(--accent);
+    --accent-blue: #3B82F6;
+    --accent-blue-dark: #2563EB;
     --accent-blue-light: #60A5FA;
     --accent-blue-glow: rgba(59, 130, 246, 0.25);
     --success: #34D399;
     --error: #F87171;
     --hero-overlay: rgba(0, 0, 0, 0.7);
     --gold-accent: #F59E0B;
-
-    /* Global background gradient for International Section */
-    --intl-gradient: linear-gradient(to bottom, #0B1120, #1A2332);
   }
 
   * {
